@@ -1,3 +1,4 @@
+
 var readlineSync = require("readline-sync");
 var score = 0;
 var userName = readlineSync.question("what your name?")
@@ -9,7 +10,7 @@ console.log("welcome " + userName + " to DO YOU KNOW tanay?");
 function play(question, answer) {
   var userAnswer = readlineSync.question(question);
 
-  if (userAnswer === answer) {
+  if (userAnswer.toUpperCase() === answer.toUpperCase()) {
     console.log("right!");
     score = score + 1;
 
